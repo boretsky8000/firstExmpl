@@ -20,10 +20,9 @@ def generate_body(header, paragraphs):
 
 def save_page(title, header, paragraphs, output="index.html"):
     fp = open(output, "w")
-    today = dt.now().date()
     page = generate_page(
-            head=generate_head(title),
-            body=generate_body(header=header, paragraphs = paragraphs)
+        head=generate_head(title),
+        body=generate_body(header=header, paragraphs = paragraphs)
     )
     print(page, file=fp)
     fp.close()

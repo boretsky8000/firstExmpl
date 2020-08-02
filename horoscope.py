@@ -29,3 +29,4 @@ def generate_prophecies(total_num=5, num_sentences=3):
         i = i + 1
 
     return prophecies
+    
