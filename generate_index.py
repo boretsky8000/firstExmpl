@@ -23,7 +23,7 @@ def generate_body(header, paragraphs):
     return "<body>" + body + "</body>"
 
 def save_page(title, header, paragraphs, output="index.html"):
-    fp = open(output, "w")
+    fp = open(output, "w", encoding="utf-8")
     page = generate_page(
         head=generate_head(title),
         body=generate_body(header=header, paragraphs = paragraphs)
