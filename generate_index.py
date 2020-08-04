@@ -17,7 +17,7 @@ def generate_head(title):
 	<title>{title}</title>
 	</head>
 	"""
-	return head
+    return head
 
 
 def generate_body(header, paragraphs):
