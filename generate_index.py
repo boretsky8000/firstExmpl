@@ -38,3 +38,5 @@ save_page(
     paragraphs = generate_prophecies()
 
 )
+
+print("""%s""" % msg)
