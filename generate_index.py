@@ -39,4 +39,4 @@ save_page(
 
 )
 
-print("""%s""" % msg)
+print(" ")
