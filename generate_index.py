@@ -21,7 +21,7 @@ def generate_head(title):
 def generate_body(header, paragraphs):
     body = "<h1>" + header + "</h1>"
     for p in paragraphs:
-        body += "<p>" + p + "</p>"
+        body = body + "<p>" + p + "</p>"
     return "<body>" + body + "</body>"
 
 def save_page(title, header, paragraphs, output="index.html"):
