@@ -1,6 +1,4 @@
 # coding: utf-8
-#/.github/workflows/python-package.yml
-print("Content-Type: text/html\n\n")
 
 from horoscope import generate_prophecies
 from datetime import datetime as dt
