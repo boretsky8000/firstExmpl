@@ -12,7 +12,7 @@ def generate_page(head, body):
     return page
 
 def generate_head(title):
-    head = "<meta charset=\"utf-8\">" + "<title>" + title + "</title>"
+    head = "<meta charset=\'utf-8\'>" + "<title>" + title + "</title>"
     return "<head>" + head + "</head>"
 
 
