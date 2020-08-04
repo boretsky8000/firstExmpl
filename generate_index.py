@@ -3,6 +3,9 @@
 from horoscope import generate_prophecies
 from datetime import datetime as dt
 
+#!/usr/bin/python3
+print("Content-Type: text/html\n\n")
+
 def generate_page(head, body):
     page = "<html>" + head + body + "</html>"
     return page
