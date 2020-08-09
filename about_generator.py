@@ -1,2 +1,2 @@
 def generate_about_text():
-    return
+    return "hello"
