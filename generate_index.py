@@ -16,6 +16,7 @@ def generate_body(header, paragraphs):
     body = "<h1>" + header + "</h1>"
     for p in paragraphs:
         body += "<p>" + p + "</p>"
+    body += "<a href=\"about.html\">О чем это все?</a>"
     return "<body>" + body + "</body>"
 
 def save_page(title, header, paragraphs, output="index.html"):
