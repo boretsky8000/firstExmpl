@@ -1,26 +1,32 @@
+
 # coding: utf-8
 
 from horoscope import generate_prophecies
 from datetime import datetime as dt
+
+
 
 def generate_page(head, body):
     page = "<html>" + head + body + "</html>"
     return page
 
 def generate_head(title):
-    head = "<meta charset=\"utf-8\">" + "<title>" + title + "</title>"
-    return "<head>" + head + "</head>"
+    head = f"""<head>
+	<meta charset='utf-8'>
+	<title>{title}</title>
+	</head>
+	"""
+    return head
 
 
 def generate_body(header, paragraphs):
     body = "<h1>" + header + "</h1>"
     for p in paragraphs:
-        body += "<p>" + p + "</p>"
-    body += "<a href=\"about.html\">О чем это все?</a>"
+        body = body + "<p>" + p + "</p>"
     return "<body>" + body + "</body>"
 
 def save_page(title, header, paragraphs, output="index.html"):
-    fp = open(output, "w")
+    fp = open(output, "w", encoding="utf-8")
     page = generate_page(
         head=generate_head(title),
         body=generate_body(header=header, paragraphs = paragraphs)
@@ -35,3 +41,5 @@ save_page(
     paragraphs = generate_prophecies()
 
 )
+
+print(" ")
