@@ -3,6 +3,7 @@
 
 from horoscope import generate_prophecies
 from datetime import datetime as dt
+from about_generator import generate_about_text
 
 
 
@@ -21,7 +22,9 @@ def generate_body(header, paragraphs):
     body = "<h1>" + header + "</h1>"
     for p in paragraphs:
         body = body + "<p>" + p + "</p>"
+    body += "<a href='about.html'>О чем все это?</a>"
     return "<body>" + body + "</body>"
+
 
 def save_page(title, header, paragraphs, output="index.html"):
     fp = open(output, "w", encoding="utf-8")
@@ -40,4 +43,31 @@ save_page(
 
 )
 
+############## GENERATE ABOUT PAGE ################
+
+
+
+def generate_about_body(header, paragraphs):
+    body = "<h1>" + header + "</h1>"
+    for p in paragraphs:
+        body = body + "<p>" + p + "</p>"
+    body += "<a href='about.html'>О чем все это?</a>"
+    return "<body>" + body + "</body>"
+    
+
+def generate_about_page(title, header, paragraphs):
+    fp = open("about.html", "w")
+    page = generate_page(
+        head = generate_head(title),
+        body = generate_body(header=header, paragraphs = paragraphs)
+    )
+    print(page, file=fp)
+    fp.close()
+
+
+generate_about_page(
+    title = "О чем все это?",
+    header = "О чем все это?",
+    paragraphs = "<img src='logo'>" + generate_about_text()
+)    
 print(" ")
