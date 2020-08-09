@@ -56,7 +56,7 @@ def generate_about_body(header, paragraphs):
     
 
 def generate_about_page(title, header, paragraphs):
-    fp = open("about.html", "w")
+    fp = open("about.html", "w", encoding="utf-8")
     page = generate_page(
         head = generate_head(title),
         body = generate_body(header=header, paragraphs = paragraphs)
