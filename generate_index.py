@@ -49,7 +49,7 @@ save_page(
 
 def generate_about_body(header, paragraphs):
     body = "<h1>" + header + "</h1>"
-    print ("<img src='logo.png'>")
+    body += "<img src='logo.png'>"
     # for p in paragraphs:
     #     body = body + "<p>" + p + "</p>"
     body += "<a href='index.html'>Гороскоп</a>"
