@@ -49,8 +49,8 @@ save_page(
 
 def generate_about_body(header, paragraphs):
     body = "<h1>" + header + "</h1>"
-    for p in paragraphs:
-        body = body + "<p>" + p + "</p>"
+    # for p in paragraphs:
+    #     body = body + "<p>" + p + "</p>"
     body += "<a href='about.html'>О чем все это?</a>"
     return "<body>" + body + "</body>"
     
