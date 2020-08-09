@@ -68,6 +68,6 @@ def generate_about_page(title, header, paragraphs):
 generate_about_page(
     title = "О чем все это?",
     header = "О чем все это?",
-    paragraphs = "<img src='logo'>" + generate_about_text()
+    paragraphs = "<img src='logo.png'>" + generate_about_text()
 )    
 print(" ")
