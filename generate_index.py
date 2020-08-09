@@ -49,6 +49,7 @@ save_page(
 
 def generate_about_body(header, paragraphs):
     body = "<h1>" + header + "</h1>"
+    print ("<img src='logo.png'>")
     # for p in paragraphs:
     #     body = body + "<p>" + p + "</p>"
     body += "<a href='index.html'>Гороскоп</a>"
@@ -59,7 +60,7 @@ def generate_about_page(title, header, paragraphs):
     fp = open("about.html", "w", encoding="utf-8")
     page = generate_page(
         head = generate_head(title),
-        body = generate_body(header=header, paragraphs = paragraphs)
+        body = generate_about_body(header=header, paragraphs = paragraphs)
     )
     print(page, file=fp)
     fp.close()
@@ -68,6 +69,6 @@ def generate_about_page(title, header, paragraphs):
 generate_about_page(
     title = "О чем все это?",
     header = "О чем все это?",
-    paragraphs = "<img src='logo.png'>" + generate_about_text()
+    paragraphs = generate_about_text()
 )    
 print(" ")
